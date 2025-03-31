@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: purple;
+    color: white;
+    padding-left: 600px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+header .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .nav-link {
+    font-size: 18px;
+    color: white !important;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #333;
+    background-color: beige;
+    margin: 0px;
+    justify-content: center;
+    font-family:Arial, Helvetica, sans-serif;
+    align-content: center;
+    padding-left: 600px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.main-content {
+    padding: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: beige;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+
+}
+
+.main-content-para{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.carousel-caption h5 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    object-fit: cover;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    color: black;
+    margin: 0;
+}
+
+footer {
+    color: white;
+    padding: 20px;
+    align-self: baseline;
+    background-color: gray;
+}
+
+.button{
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color:purple;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+dt{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+dd{
+    font-size: 16px;
+}
