@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Arrangement System</title>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="web.css">
+
+</head>
+
+<body>
+
+
+
+<header>
+
+    <nav>
+
+        <span class="menu-icon" id="menu">☰</span>
+
+        <h1 class="company-name">
+
+            <span class="heart">♥</span> Tymeless Love<span class="heart">♥ </span>
+
+        </h1>
+
+
+
+        <ul>
+
+            <li><a href="#">Vendors <i class="fas fa-store"></i></a></li>
+
+            <li><a href="#">Booking <i class="fas fa-calendar-check"></i></a></li>
+
+            <li><a href="#">Packages <i class="fas fa-gift"></i></a></li>
+
+            <li><a href="#" id="registerBtn">Register <i class="fas fa-user-plus"></i></a></li>
+
+            <li><a href="#" id="loginBtn">Login <i class="fas fa-sign-in-alt"></i></a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- About Note -->
+
+<div class="about-note" id="about-note">
+
+    Celebrate your love with a beautifully designed wedding. Share your love story, event details, RSVP options, and stunning photos with your guests. Make your special day unforgettable with us.
+
+</div>
+
+
+
+<!-- Login Form -->
+
+<div class="form-container" id="loginForm">
+
+    <h2>Login to Royal Wedding</h2>
+
+    <form class="form">
+
+        <input type="email" id="email" placeholder="Email" required>
+
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit" id="loginBtnSubmit">Login</button>
+
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+
+
+
+        <!-- Social Media Login -->
+
+        <div class="social-buttons">
+
+            <a href="#" class="google" onclick="googleLogin()"><i class="fab fa-google"></i> Google</a>
+
+            <a href="#" class="facebook" onclick="facebookLogin()"><i class="fab fa-facebook-f"></i> Facebook</a>
+
+        </div>
+
+    </form>
+
+    <p id="loginSuccessMessage" class="success-message">Login Successful! Welcome!</p>
+
+</div>
+
+
+
+<!-- Register Form -->
+
+<div class="form-container" id="registerForm">
+
+    <h2>Register for Royal Wedding</h2>
+
+    <form class="form">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="email" id="registerEmail" placeholder="Email" required>
+
+        <input type="text" id="contact" placeholder="Contact Number" required>
+
+        <input type="password" id="registerPassword" placeholder="Password" required>
+
+        <button type="submit" id="registerBtnSubmit">Register</button>
+
+    </form>
+
+    <p id="registerSuccessMessage" class="success-message">Registration Successful! Welcome!</p>
+
+</div>
+
+
+
+<div class="video_section">
+
+    <video autoplay loop="true" controls="" width="640" height="480" class="video_main_banner">
+
+        <source type="video/mp4" src="./media/wedding-planning-platform-promotion.mp4">
+
+    </video>
+
+</div>
+
+
+
+<script>
+
+
+    document.getElementById("menu").addEventListener("click", function() {
+
+        let aboutNote = document.getElementById("about-note");
+
+        aboutNote.style.display = (aboutNote.style.display === "block") ? "none" : "block";
+
+    });
+
+
+
+    document.getElementById("loginBtn").addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        let loginForm = document.getElementById("loginForm");
+
+        loginForm.style.display = (loginForm.style.display === "block") ? "none" : "block";
+
+        document.getElementById("registerForm").style.display = "none";
+
+    });
+
+
+
+    document.getElementById("registerBtn").addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        let registerForm = document.getElementById("registerForm");
+
+        registerForm.style.display = (registerForm.style.display === "block") ? "none" : "block";
+
+        document.getElementById("loginForm").style.display = "none";
+
+    });
+
+
+
+    document.getElementById("loginBtnSubmit").addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("logoutBtn").style.display = "block";
+
+        document.getElementById("loginSuccessMessage").style.display = "block";
+
+
+
+        setTimeout(function() {
+
+            document.getElementById("loginForm").style.display = "none";
+
+        }, 5000);
+
+    });
+
+
+
+    document.getElementById("registerBtnSubmit").addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("registerSuccessMessage").style.display = "block";
+
+
+
+        setTimeout(function() {
+
+            document.getElementById("registerForm").style.display = "none";
+
+            document.getElementById("registerSuccessMessage").style.display = "none";
+
+        }, 5000);
+
+    });
+
+
+
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+
+        location.reload();
+
+    });
+
+
+
+    function googleLogin() { alert("Google Login Clicked"); }
+
+    function facebookLogin() { alert("Facebook Login Clicked"); }
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
